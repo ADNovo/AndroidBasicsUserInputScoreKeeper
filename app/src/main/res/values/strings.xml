@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Gin Rummy Score Keeper</string>
+    <string name="player_a">Player A</string>
+    <string name="player_b">Player B</string>
+    <string name="knock">Knock</string>
+    <string name="gin">Gin</string>
+    <string name="big_gin">Big Gin</string>
+    <string name="deadwood">Deadwood</string>
+    <string name="plus_one">+1</string>
+    <string name="minus_one">-1</string>
+    <string name="zero">0</string>
+    <string name="reset">Reset</string>
+</resources>

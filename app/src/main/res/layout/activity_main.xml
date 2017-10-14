@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Images in the corners -->
+
+    <ImageView
+        style="@style/CornerImage"
+        android:src="@drawable/king_hearts_up" />
+
+    <ImageView
+        style="@style/CornerImage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/king_hearts_down" />
+
+    <!-- Inner border line -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="32dp"
+        android:background="#000000" >
+
+        <!-- Inner rectangle -->
+
+        <RelativeLayout
+            android:id="@+id/main_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#FFFFFF" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <!-- Player A section vertical linear layout -->
+
+                <LinearLayout
+                    style="@style/PlayerLinearLayout" >
+
+                    <!-- Score section -->
+
+                    <TextView
+                        style="@style/TitleTextView"
+                        android:text="@string/player_a" />
+
+                    <TextView
+                        style="@style/ScoreTextView"
+                        android:id="@+id/player_a_score"
+                        android:text="@string/zero" />
+
+                    <Button
+                        style="@style/ScoreButtonView"
+                        android:onClick="knockOfPlayerA"
+                        android:text="@string/knock" />
+
+                    <Button
+                        style="@style/ScoreButtonView"
+                        android:onClick="ginOfPlayerA"
+                        android:text="@string/gin" />
+
+                    <Button
+                        style="@style/ScoreButtonView"
+                        android:onClick="bigGinOfPlayerA"
+                        android:text="@string/big_gin" />
+
+                    <!-- Deadwood section -->
+
+                    <TextView
+                        style="@style/TitleTextView"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/deadwood" />
+
+                    <TextView
+                        android:id="@+id/player_a_deadwood"
+                        style="@style/DeadwoodTextView"
+                        android:text="@string/zero" />
+
+                    <LinearLayout
+                        style="@style/DeadwoodButtonLinearLayout" >
+
+                        <Button
+                            style="@style/DeadwoodButtonView"
+                            android:onClick="decrementDeadwoodOfPlayerA"
+                            android:text="@string/minus_one" />
+
+                        <Button
+                            style="@style/DeadwoodButtonView"
+                            android:onClick="incrementDeadwoodOfPlayerA"
+                            android:text="@string/plus_one" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Separation line between player sections -->
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:background="#000000"
+                    android:orientation="horizontal" />
+
+                <!-- Player B section vertical linear layout -->
+
+                <LinearLayout
+                    style="@style/PlayerLinearLayout" >
+
+                    <!-- Score section -->
+
+                    <TextView
+                        style="@style/TitleTextView"
+                        android:text="@string/player_b" />
+
+                    <TextView
+                        style="@style/ScoreTextView"
+                        android:id="@+id/player_b_score"
+                        android:text="@string/zero" />
+
+                    <Button
+                        style="@style/ScoreButtonView"
+                        android:onClick="knockOfPlayerB"
+                        android:text="@string/knock" />
+
+                    <Button
+                        style="@style/ScoreButtonView"
+                        android:onClick="ginOfPlayerB"
+                        android:text="@string/gin" />
+
+                    <Button
+                        style="@style/ScoreButtonView"
+                        android:onClick="bigGinOfPlayerB"
+                        android:text="@string/big_gin" />
+
+                    <!-- Deadwood section -->
+
+                    <TextView
+                        style="@style/TitleTextView"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/deadwood" />
+
+                    <TextView
+                        android:id="@+id/player_b_deadwood"
+                        style="@style/DeadwoodTextView"
+                        android:text="@string/zero" />
+
+                    <LinearLayout
+                        style="@style/DeadwoodButtonLinearLayout" >
+
+                        <Button
+                            style="@style/DeadwoodButtonView"
+                            android:onClick="decrementDeadwoodOfPlayerB"
+                            android:text="@string/minus_one" />
+
+                        <Button
+                            style="@style/DeadwoodButtonView"
+                            android:onClick="incrementDeadwoodOfPlayerB"
+                            android:text="@string/plus_one" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Reset button -->
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:onClick="reset"
+                android:text="@string/reset"
+                android:textColor="#FFFFFF" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
